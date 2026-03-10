@@ -589,6 +589,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "NaoPause",
+                    "type": "Button",
+                    "id": "f18774b4-9778-44b3-a11e-7ce0afee4277",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1007,6 +1016,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a77cc875-c8e9-4c13-8a27-330e5309a417",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NaoPause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

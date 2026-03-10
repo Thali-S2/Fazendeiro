@@ -15,6 +15,7 @@ public class NewPlayerControl : MonoBehaviour
     private InputAction moveAction;
     private InputAction fireAction;
     private InputAction pauseAction;
+    private InputAction naopauseAction;
     public GameObject menuPause;
 
     // Update is called once per frame
@@ -41,6 +42,10 @@ public class NewPlayerControl : MonoBehaviour
         {
             Pause();
         }
+        if (naopauseAction.WasPressedThisFrame())
+        {
+            NaoPause();
+        }
         // dispara comida ao pressionar barra de espa�o
         /*if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -63,7 +68,7 @@ public class NewPlayerControl : MonoBehaviour
         
     }*/
 
-    private void Onable()
+    private void OnEnable()
     {
         InputActions.FindActionMap("Player").Enable();
     }
@@ -76,11 +81,20 @@ public class NewPlayerControl : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
         pauseAction = InputSystem.actions.FindAction("Pause");
+        naopauseAction = InputSystem.actions.FindAction("NaoPause");
     }
     private void Pause()
     {
-        OnDisable();
+        InputActions.FindActionMap("Player").Disable(); // disativa o player
+        InputActions.FindActionMap("UI").Enable(); // ativa o UI
         menuPause.gameObject.SetActive(true);
+
+    }
+    private void NaoPause()
+    {
+        InputActions.FindActionMap("UI").Disable(); // disativa o UI
+        InputActions.FindActionMap("Player").Enable(); // ativa o Player
+        menuPause.gameObject.SetActive(false);
 
     }
 }
