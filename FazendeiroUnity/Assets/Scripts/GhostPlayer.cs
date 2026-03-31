@@ -24,38 +24,24 @@ public class GhostPlayer : MonoBehaviour
             Ghost();
         }
 
-        /*if (naoGhostAction.WasPressedThisFrame())
-        {
-            NaoGhost();
-        }*/
     }
 
     private void Awake()
     {
         ghostAction = InputSystem.actions.FindAction("Ghost");
-        naoGhostAction = InputSystem.actions.FindAction("NaoGhost");
     }
 
     private void Ghost()
     {
-        transform.localScale = new Vector3(0f, 0f, 0f);
-        print("sla");
+        //transform.localScale = new Vector3(0f, 0f, 0f);
+        Debug.Log("Ativou Ghost");
+        StartCoroutine("TerminaGhost");
     }
 
-    /*private void NaoGhost()
+    IEnumerator TerminaGhost()
     {
-        transform.localScale = new Vector3(2f, 2f, 2f);
-        print("sla2");
-    }*/
-
-    /*IEnumerator WaitAndPrint()
-    {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3f);
+        Debug.Log("Desativou Ghost");
     }
 
-    IEnumerator Start()
-    {
-        yield return StartCoroutine("WaitAndPrint"); 
-        print("sla");
-    }*/
 }
