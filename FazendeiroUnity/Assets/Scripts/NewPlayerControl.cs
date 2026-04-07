@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class NewPlayerControl : MonoBehaviour
 {
@@ -16,7 +18,9 @@ public class NewPlayerControl : MonoBehaviour
     private InputAction fireAction;
     private InputAction pauseAction;
     private InputAction naopauseAction;
+    private InputAction menuAction;
     public GameObject menuPause;
+    public bool isPaused = false;
 
     // Update is called once per frame
     void Update()
@@ -45,6 +49,10 @@ public class NewPlayerControl : MonoBehaviour
         if (naopauseAction.WasPressedThisFrame())
         {
             NaoPause();
+        }
+        if (menuAction.WasPressedThisFrame())
+        {
+            AbrirMenu();
         }
         // dispara comida ao pressionar barra de espa�o
         /*if (Input.GetKeyDown(KeyCode.Space))
@@ -82,12 +90,14 @@ public class NewPlayerControl : MonoBehaviour
         fireAction = InputSystem.actions.FindAction("Jump");
         pauseAction = InputSystem.actions.FindAction("Pause");
         naopauseAction = InputSystem.actions.FindAction("NaoPause");
+        menuAction = InputSystem.actions.FindAction("AbrirMenu");
     }
     private void Pause()
     {
         InputActions.FindActionMap("Player").Disable(); // disativa o player
         InputActions.FindActionMap("UI").Enable(); // ativa o UI
         menuPause.gameObject.SetActive(true);
+        isPaused=true;
 
     }
     private void NaoPause()
@@ -95,6 +105,12 @@ public class NewPlayerControl : MonoBehaviour
         InputActions.FindActionMap("UI").Disable(); // disativa o UI
         InputActions.FindActionMap("Player").Enable(); // ativa o Player
         menuPause.gameObject.SetActive(false);
+        isPaused=false;
 
+    }
+
+    private void AbrirMenu()
+    {
+        //SceneManager.LoadScene("Menu");
     }
 }
