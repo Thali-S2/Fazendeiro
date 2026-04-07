@@ -88,6 +88,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Ghost",
+                    "type": "Button",
+                    "id": "4f2d1e07-4a11-48e9-8ae9-d0683482fce1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AbrirMenu",
+                    "type": "Button",
+                    "id": "c1b5c03e-7dda-4f54-b4a1-3cd09a007081",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "91b64078-55db-45b5-a1e7-cc1bb977d59c",
@@ -485,12 +503,45 @@
                 },
                 {
                     "name": "",
+                    "id": "2cc9425b-229a-4ed8-b7a1-ff8b4a4db5b8",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1a3b56dd-3b50-451f-8041-4b7a3a2e37fd",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da8ebafd-9949-42cd-be93-d2cf968f2f90",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ghost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39a5f20c-b7fe-4235-a05f-a998a9092856",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbrirMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -594,6 +645,15 @@
                     "name": "NaoPause",
                     "type": "Button",
                     "id": "f18774b4-9778-44b3-a11e-7ce0afee4277",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "2683d6bb-b6cd-4418-aeb1-b47b7f385ee3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1027,6 +1087,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "NaoPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30a57c7e-7782-4375-af01-b14b7893470d",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebfc2610-97fc-46b2-a58a-2f686c2c2fdf",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
