@@ -7,7 +7,8 @@ using System.Collections;
 public class GhostPlayer : MonoBehaviour
 {
     private InputAction ghostAction;
-    private InputAction naoGhostAction;
+    private bool ghosttt = false;
+    private Renderer playerRender;
 
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,15 +34,25 @@ public class GhostPlayer : MonoBehaviour
 
     private void Ghost()
     {
-        //transform.localScale = new Vector3(0f, 0f, 0f);
-        Debug.Log("Ativou Ghost");
-        StartCoroutine("TerminaGhost");
+        if (!ghosttt)
+        {
+            playerRender.enabled=false;
+            ghosttt=true;
+        } else
+        {
+            playerRender.enabled=true;
+            ghosttt=false;
+        }
+
+        //Debug.Log("Ativou Ghost");
+
+       // StartCoroutine("TerminaGhost");
     }
 
-    IEnumerator TerminaGhost()
+    /*IEnumerator TerminaGhost()
     {
         yield return new WaitForSeconds(3f);
         Debug.Log("Desativou Ghost");
-    }
+    }*/
 
 }
