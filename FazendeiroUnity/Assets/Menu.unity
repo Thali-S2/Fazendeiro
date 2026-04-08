@@ -283,7 +283,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020779550}
         m_TargetAssemblyTypeName: MenuiPrincipal, Assembly-CSharp
-        m_MethodName: SairJogo
+        m_MethodName: AbrirTelaConfirmar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2091,7 +2091,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020779550}
         m_TargetAssemblyTypeName: MenuiPrincipal, Assembly-CSharp
-        m_MethodName: VoltarMenu
+        m_MethodName: FecharTelaConfirmar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3811,6 +3811,7 @@ MonoBehaviour:
   nomeDoMenu: 
   painelMenuInicial: {fileID: 1492515201}
   painelOpcoes: {fileID: 1515089116}
+  telaConfirmar: {fileID: 492911605}
 --- !u!4 &2020779551
 Transform:
   m_ObjectHideFlags: 0

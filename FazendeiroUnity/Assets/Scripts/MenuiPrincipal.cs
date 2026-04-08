@@ -6,6 +6,7 @@ public class MenuiPrincipal : MonoBehaviour
     [SerializeField] private string nomeDoMenu;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject telaConfirmar;
     public void Jogar()
     {
         SceneManager.LoadScene(nomeDoLevelDeJogo);
@@ -28,7 +29,24 @@ public class MenuiPrincipal : MonoBehaviour
 
     public void SairJogo()
     {
-        Debug.Log("Sair do jogo");
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
         Application.Quit();
+        #endif
+    }
+
+    public void AbrirTelaConfirmar()
+    {
+        painelMenuInicial.SetActive(false);
+        telaConfirmar.SetActive(true);
+
+    }
+
+    public void FecharTelaConfirmar()
+    {
+        telaConfirmar.SetActive(false);
+        painelMenuInicial.SetActive(true);
+
     }
 }
