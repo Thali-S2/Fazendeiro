@@ -6,6 +6,7 @@ public class MenuiPrincipal : MonoBehaviour
     [SerializeField] private string nomeDoMenu;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject pause;
     [SerializeField] private GameObject telaConfirmar;
     public void Jogar()
     {
@@ -34,6 +35,11 @@ public class MenuiPrincipal : MonoBehaviour
         #else
         Application.Quit();
         #endif
+    }
+
+    public void AbrirTelaPause()
+    {
+        
     }
 
     public void AbrirTelaConfirmar()
