@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreVida : MonoBehaviour
 {
     public static ScoreVida instancee;
     
     public TextMeshProUGUI scoreTextVida;
+    public GameObject gameOver;
 
     int scoreVida=3;
 
@@ -22,8 +24,17 @@ public class ScoreVida : MonoBehaviour
     // Update is called once per frame
     public void Vidas()
     {
-        scoreVida -= 1;
-        scoreTextVida.text = scoreVida.ToString() + " VIDAS";
-
+        if (scoreVida > 0)
+        {
+            scoreVida -= 1;
+            scoreTextVida.text = scoreVida.ToString() + " VIDAS";
+        }
+        
+        
+        if (scoreVida <=0)
+        {
+            scoreTextVida.text = "0";
+            gameOver.gameObject.SetActive(true);
+        }
     }
 }

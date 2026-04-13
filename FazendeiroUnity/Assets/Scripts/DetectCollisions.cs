@@ -18,9 +18,13 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
-        Scoree.instance.AddPontos();
-        ScoreVida.instancee.Vidas();
+        if(other.CompareTag("Animais"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            Scoree.instance.AddPontos();
+            //ScoreVida.instancee.Vidas();
+        }
+        
     }
 }

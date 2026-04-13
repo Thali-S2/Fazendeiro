@@ -11,6 +11,7 @@ public class GhostPlayer : MonoBehaviour
     private Renderer playerRender;
     private InputAction ghostAction;
     public InputActionAsset InputActions;
+    private BoxCollider playerCollider;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +32,8 @@ public class GhostPlayer : MonoBehaviour
     private void Awake()
     {
         ghostAction = InputSystem.actions.FindAction("Ghost");
+        playerRender = GetComponent<Renderer>();
+        playerCollider = GetComponent<BoxCollider>();
     }
 
     private void OnEnable()
@@ -48,11 +51,13 @@ public class GhostPlayer : MonoBehaviour
         {
             playerRender.enabled=false;
             ghosttt=true;
+            playerCollider.enabled = false; 
             StartCoroutine(TerminaGhost());
         } else
         {
             playerRender.enabled=true;
             ghosttt=false;
+             playerCollider.enabled = true; 
             StartCoroutine(ComecaGhost());
         }
 
