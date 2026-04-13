@@ -21,5 +21,6 @@ public class DetectCollisions : MonoBehaviour
         Destroy(gameObject);
         Destroy(other.gameObject);
         Scoree.instance.AddPontos();
+        ScoreVida.instancee.Vidas();
     }
 }
