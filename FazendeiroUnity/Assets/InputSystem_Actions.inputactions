@@ -536,6 +536,17 @@
                 },
                 {
                     "name": "",
+                    "id": "943db441-d869-4599-b857-158e277bc02b",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ghost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "39a5f20c-b7fe-4235-a05f-a998a9092856",
                     "path": "<Keyboard>/escape",
                     "interactions": "",

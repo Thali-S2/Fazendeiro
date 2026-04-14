@@ -6,7 +6,7 @@ using System.Collections;
 
 public class GhostPlayer : MonoBehaviour
 {
-    private bool ghosttt = false;
+    public bool ghosttt = false;
     private bool endTime = true;
     private Renderer playerRender;
     private InputAction ghostAction;
@@ -51,13 +51,11 @@ public class GhostPlayer : MonoBehaviour
         {
             playerRender.enabled=false;
             ghosttt=true;
-            playerCollider.enabled = false; 
             StartCoroutine(TerminaGhost());
         } else
         {
             playerRender.enabled=true;
             ghosttt=false;
-             playerCollider.enabled = true; 
             StartCoroutine(ComecaGhost());
         }
 

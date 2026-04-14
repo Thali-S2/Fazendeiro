@@ -25,10 +25,15 @@ public class ScoreVida : MonoBehaviour
 
     public void Vidas()
     {
+        var playerScript = GameObject.Find("Player").GetComponentInChildren<GhostPlayer>();
         if (scoreVida > 0)
         {
-            scoreVida -= 1;
-            scoreTextVida.text = scoreVida.ToString();
+            if (!playerScript.ghosttt)
+            {
+                scoreVida -= 1;
+                scoreTextVida.text = scoreVida.ToString();
+            }
+       
         }
         
         

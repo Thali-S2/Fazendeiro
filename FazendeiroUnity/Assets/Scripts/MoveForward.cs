@@ -23,7 +23,7 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = 10f + (scriptTempo.tempoDecorrido/2);
+        speed = 10f + (scriptTempo.tempoDecorrido/4);
 
         if (!playerScript.isPaused)
         {
