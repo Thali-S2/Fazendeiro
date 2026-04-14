@@ -113,6 +113,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "VidaButton",
+                    "type": "Button",
+                    "id": "820cb785-6d0a-40b8-bbd1-2dd8a32678c6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -553,6 +562,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "AbrirMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "887634ae-fc5a-4058-9714-e10106fa92bc",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VidaButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e78162f-bfba-4118-abb7-c626c7fdd57c",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VidaButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

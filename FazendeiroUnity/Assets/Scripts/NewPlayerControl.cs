@@ -20,6 +20,7 @@ public class NewPlayerControl : MonoBehaviour
     private InputAction naopauseAction;
     private float vida = 3;
     private InputAction menuAction;
+    private InputAction vidaBottonAction;
     public GameObject menuPause;
     public bool isPaused = false;
 
@@ -54,6 +55,10 @@ public class NewPlayerControl : MonoBehaviour
         if (menuAction.WasPressedThisFrame())
         {
             AbrirMenu();
+        }
+        if(vidaBottonAction.WasPressedThisFrame())
+        {
+            print("sla");
         }
         // dispara comida ao pressionar barra de espa�o
         /*if (Input.GetKeyDown(KeyCode.Space))
