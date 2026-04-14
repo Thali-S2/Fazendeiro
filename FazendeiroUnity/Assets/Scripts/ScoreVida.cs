@@ -18,7 +18,7 @@ public class ScoreVida : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreTextVida.text = scoreVida.ToString() + " VIDAS";
+        scoreTextVida.text = scoreVida.ToString();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class ScoreVida : MonoBehaviour
         if (scoreVida > 0)
         {
             scoreVida -= 1;
-            scoreTextVida.text = scoreVida.ToString() + " VIDAS";
+            scoreTextVida.text = scoreVida.ToString();
         }
         
         
