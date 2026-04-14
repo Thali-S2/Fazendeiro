@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 public class Temporizador : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    float tempoDecorrido;
+    public float tempoDecorrido;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

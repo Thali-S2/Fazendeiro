@@ -18,6 +18,7 @@ public class NewPlayerControl : MonoBehaviour
     private InputAction fireAction;
     private InputAction pauseAction;
     private InputAction naopauseAction;
+    private float vida = 3;
     private InputAction menuAction;
     public GameObject menuPause;
     public bool isPaused = false;
